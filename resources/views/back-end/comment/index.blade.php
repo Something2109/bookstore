@@ -71,6 +71,6 @@
         </div>
     </div>
 @endverbatim
-  <script src="{{ URL::asset('lib/dirPagination.js') }}"></script>
-  <script src="{{ URL::asset('lib/controller/commentController.js') }}"></script>
+  <script src="{{ URL::asset('resources/views/lib/dirPagination.js') }}"></script>
+  <script src="{{ URL::asset('resources/views/lib/controller/commentController.js') }}"></script>
 @stop

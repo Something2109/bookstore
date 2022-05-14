@@ -13,6 +13,6 @@
   </div>
 @stop
 @section('footer')
-  {{-- <script src="{{ URL::asset('lib/controller/CategoryController.js') }}"></script> --}}
-  <script src="{{ URL::asset('bh279_back-end/js/sortable-admin.js') }}"></script>
+  {{-- <script src="{{ URL::asset('resources/views/lib/controller/CategoryController.js') }}"></script> --}}
+  <script src="{{ URL::asset('resources/views/back-end/stylesheet/js/sortable-admin.js') }}"></script>
 @stop

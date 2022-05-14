@@ -5,19 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>@yield('title') - Website bán sách</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link type="text/css" rel="stylesheet" href="{{ URL::asset('bh279_front-end/css/icon.css') }}"  media="screen,projection"/>
-    <link type="text/css" rel="stylesheet" href="{{ URL::asset('bh279_front-end/css/materialize.min.css') }}"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="{{ URL::asset('resources/assets/front-end/css/icon.css') }}"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="{{ URL::asset('resources/assets/front-end/css/materialize.min.css') }}"  media="screen,projection"/>
     <!-- Latest compiled and minified CSS & JS -->
-    <link rel="stylesheet" href="{{ URL::asset('bh279_front-end/css/style.css') }}">
-    <script src="{{ URL::asset('bh279_front-end/js/jquery.min.js') }}"></script>
-    <script type="text/javascript" src="{{ URL::asset('bh279_front-end/js/materialize.min.js') }}"></script>
-<link href="{{ URL::asset('bh279_back-end/owl-carousel/owl.carousel.min.css' )}}"  rel="stylesheet" />
-<link href="{{ URL::asset('bh279_back-end/owl-carousel/owl.theme.default.min.css') }}" rel="stylesheet" />
-<link href="{{ URL::asset('bh279_back-end/css/style.css' )}}" rel="stylesheet") />
-<script src="{{ URL::asset('bh279_back-end/owl-carousel/owl.carousel.min.js') }}"></script>
-<script src="{{ URL::asset('lib/angular.min.js') }}"></script>
-<script src="{{ URL::asset('lib/app.js') }}"></script>
-  <script src="{{ URL::asset('lib/tinymce/tinymce.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ URL::asset('resources/assets/front-end/css/style.css') }}">
+    <script src="{{ URL::asset('resources/assets/front-end/js/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('resources/assets/front-end/js/materialize.min.js') }}"></script>
+    <link href="{{ URL::asset('resources/assets/back-end/owl-carousel/owl.carousel.min.css' )}}"  rel="stylesheet" />
+    <link href="{{ URL::asset('resources/assets/back-end/owl-carousel/owl.theme.default.min.css') }}" rel="stylesheet" />
+    <link href="{{ URL::asset('resources/assets/back-end/css/style.css' )}}" rel="stylesheet") />
+    <script src="{{ URL::asset('resources/assets/back-end/owl-carousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ URL::asset('resources/views/lib/angular.min.js') }}"></script>
+    <script src="{{ URL::asset('resources/views/lib/app.js') }}"></script>
+    <script src="{{ URL::asset('resources/views/lib/tinymce/tinymce.min.js') }}"></script>
     <link rel="icon" href="https://vcdn.tikicdn.com/assets/media/favicon.ico" type="image/x-icon">
   <script>tinymce.init({ selector:'textarea' });</script>
 </head>
@@ -27,7 +27,7 @@
      <nav>
     <div class="container">
         <div class="nav-wrapper">
-          <a href="{{ route('homepage') }}" class="brand-logo">Tiki</a>
+          <a href="{{ route('homepage') }}" class="brand-logo">Bookbyte</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
                @if (Auth::guest())
                     <li><a href="{{ route('login') }}">Login</a></li>
@@ -98,6 +98,6 @@
     </div>
     @section('footer')
     @show
-<script src="{{ URL::asset('bh279_back-end/js/script-admin.js') }}"></script>
+<script src="{{ URL::asset('resources/assets/back-end/js/script-admin.js') }}"></script>
 </body>
 </html>

@@ -95,6 +95,6 @@
     </div>
 @endverbatim
 </form>
-  <script src="{{ URL::asset('lib/dirPagination.js') }}"></script>
-  <script src="{{ URL::asset('lib/controller/orderController.js') }}"></script>
+  <script src="{{ URL::asset('resources/views/lib/dirPagination.js') }}"></script>
+  <script src="{{ URL::asset('resources/views/lib/controller/orderController.js') }}"></script>
 @stop

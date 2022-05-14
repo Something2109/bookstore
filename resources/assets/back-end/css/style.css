@@ -26,7 +26,7 @@ body::-webkit-scrollbar-thumb
         display: block;
         float: left;
         border-radius: 5px;
-        width: 90px;
+        /* width: 90px; */
     }
     .owl-carousel-menu .item:hover{
         background-color: #00b7f1 !important;

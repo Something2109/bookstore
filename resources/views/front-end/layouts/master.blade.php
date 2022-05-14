@@ -5,23 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>@yield('title') - Tiki.vn - Website bán sách hàng đầu VN</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link type="text/css" rel="stylesheet" href="{{ URL::asset('bh279_front-end/css/icon.css') }}"  media="screen,projection"/>
-    <link type="text/css" rel="stylesheet" href="{{ URL::asset('bh279_front-end/css/materialize.min.css') }}"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="{{ URL::asset('resources/assets/front-end/css/icon.css') }}"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="{{ URL::asset('resources/assets/front-end/css/materialize.min.css') }}"  media="screen,projection"/>
 
     <!-- Latest compiled and minified CSS & JS -->
-    <link rel="stylesheet" href="{{ URL::asset('bh279_front-end/css/normalize.css') }}">
-     <link rel="stylesheet" href="{{ URL::asset('bh279_front-end/css/swiper.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('resources/assets/front-end/css/normalize.css') }}">
+     <link rel="stylesheet" href="{{ URL::asset('resources/assets/front-end/css/swiper.min.css') }}">
 
-    <link rel="stylesheet" href="{{ URL::asset('bh279_front-end/css/style.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('resources/assets/front-end/css/style.css') }}">
 
-    <script src="{{ URL::asset('bh279_front-end/js/jquery.min.js') }}"></script>
-    <script type="text/javascript" src="{{ URL::asset('bh279_front-end/js/materialize.min.js') }}"></script>
-    <script src="{{ URL::asset('bh279_front-end/js/swiper.jquery.min.js') }}"></script>
-    <script src="{{ URL::asset('lib/jquery.number.min.js') }}"></script>
-    <script src="{{ URL::asset('bh279_front-end/js/myscript.js') }}"></script>
+    <script src="{{ URL::asset('resources/assets/front-end/js/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('resources/assets/front-end/js/materialize.min.js') }}"></script>
+    <script src="{{ URL::asset('resources/assets/front-end/js/swiper.jquery.min.js') }}"></script>
+    <script src="{{ URL::asset('resources/lib/jquery.number.min.js') }}"></script>
+    <script src="{{ URL::asset('resources/assets/front-end/js/myscript.js') }}"></script>
 
-    <link rel="stylesheet" href="{{ asset('lib/rateYo/jquery.rateyo.min.css') }}">
-    <script src="{{ asset('lib/rateYo/jquery.rateyo.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('resources/lib/rateYo/jquery.rateyo.min.css') }}">
+    <script src="{{ asset('resources/lib/rateYo/jquery.rateyo.min.js') }}"></script>
     
     <link rel="icon" href="https://vcdn.tikicdn.com/assets/media/favicon.ico" type="image/x-icon">
 </head>
@@ -33,14 +33,14 @@
                 <div class="nav-wrapper">
                     <div class="container">
                         <div class="row">
-                            <div class="col l1">
-                              <a href="{{ route('homepage') }}" class="brand-logo">Tiki</a>
-                              <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                            <div class="col l2">
+                              <a href="{{ route('homepage') }}" class="brand-logo">Bookbyte</a>
+                              <!-- <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a> -->
                             </div>
                             <div class="col l1">
                               <a href="" class="show-menu"><i class="material-icons">menu</i></a>
-                              </div>
-                            <form class="col l5" action="{{ route('search') }}" method="GET" style="" id='form-submit'>
+                            </div>
+                            <form class="col l4" action="{{ route('search') }}" method="GET" style="" id='form-submit'>
                                 
                                 <div class="search-wrapper card">
                                     <input id="search" name="txtSearch" placeholder="Nhập tên sách, tác giả, cty phát hành" value="{{(isset($txtSearch))?$txtSearch:''}}">
@@ -123,6 +123,6 @@
         </a>
         </li>
     </ul>
-<div class="png-loading"></div>
+<!-- <div class="png-loading"></div> -->
 </body>
 </html>

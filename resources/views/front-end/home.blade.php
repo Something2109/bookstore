@@ -21,7 +21,7 @@ Trang chủ
 
     </script>
     <!-- Modal Structure -->
-  <div id="modal1" class="modal">
+  <!-- <div id="modal1" class="modal">
     <div class="modal-content">
       <h4>TEST</h4>
       <p class="red-text">username: <b>buihai2603@gmail.com</b> <br> pass: <b>123456</b></p>
@@ -29,5 +29,5 @@ Trang chủ
     <div class="modal-footer">
       <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
     </div>
-  </div>
+  </div> -->
 @stop

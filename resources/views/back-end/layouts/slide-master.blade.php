@@ -15,5 +15,5 @@
         </div>
 @stop
 @section('footer')
-  {{-- <script src="{{ URL::asset('lib/controller/SlideController.js') }}"></script> --}}
+  {{-- <script src="{{ URL::asset('resources/views/lib/controller/SlideController.js') }}"></script> --}}
 @stop

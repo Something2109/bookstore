@@ -6,5 +6,5 @@
 </div>
 @stop
 @section('footer')
-  {{-- <script src="{{ URL::asset('lib/controller/UserController.js') }}"></script> --}}
+  {{-- <script src="{{ URL::asset('resources/views/lib/controller/UserController.js') }}"></script> --}}
 @stop
