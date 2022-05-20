@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>@yield('title') - Tiki.vn - Website bán sách hàng đầu VN</title>
+    <title>@yield('title') - Bookbyte.uet</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link type="text/css" rel="stylesheet" href="{{ URL::asset('resources/assets/front-end/css/icon.css') }}"  media="screen,projection"/>
     <link type="text/css" rel="stylesheet" href="{{ URL::asset('resources/assets/front-end/css/materialize.min.css') }}"  media="screen,projection"/>
@@ -17,13 +17,13 @@
     <script src="{{ URL::asset('resources/assets/front-end/js/jquery.min.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('resources/assets/front-end/js/materialize.min.js') }}"></script>
     <script src="{{ URL::asset('resources/assets/front-end/js/swiper.jquery.min.js') }}"></script>
-    <script src="{{ URL::asset('resources/lib/jquery.number.min.js') }}"></script>
+    <script src="{{ URL::asset('resources/views/lib/jquery.number.min.js') }}"></script>
     <script src="{{ URL::asset('resources/assets/front-end/js/myscript.js') }}"></script>
 
-    <link rel="stylesheet" href="{{ asset('resources/lib/rateYo/jquery.rateyo.min.css') }}">
-    <script src="{{ asset('resources/lib/rateYo/jquery.rateyo.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('resources/views/lib/rateYo/jquery.rateyo.min.css') }}">
+    <script src="{{ asset('resources/views/views/lib/rateYo/jquery.rateyo.min.js') }}"></script>
     
-    <link rel="icon" href="https://vcdn.tikicdn.com/assets/media/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{ asset('resources\assets\logo.ico') }}" type="image/x-icon">
 </head>
 <body style="background-color: #fcfcfc">
     @section('header')
@@ -34,8 +34,8 @@
                     <div class="container">
                         <div class="row">
                             <div class="col l2">
-                              <a href="{{ route('homepage') }}" class="brand-logo">Bookbyte</a>
-                              <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                              <a href="{{ route('homepage') }}" class="brand-logo" style="position: relative">Bookbyte</a>
+                              <!-- <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a> -->
                             </div>
                             <div class="col l1">
                               <a href="" class="show-menu"><i class="material-icons">menu</i></a>
@@ -43,7 +43,7 @@
                             <form class="col l4" action="{{ route('search') }}" method="GET" style="" id='form-submit'>
                                 
                                 <div class="search-wrapper card">
-                                    <input id="search" name="txtSearch" placeholder="Nhập tên sách, tác giả, cty phát hành" value="{{(isset($txtSearch))?$txtSearch:''}}">
+                                    <input id="search" name="txtSearch" placeholder="Tìm kiếm" value="{{(isset($txtSearch))?$txtSearch:''}}">
                                     <i class="material-icons" id='submit-search'>search</i>
                                     <button type="submit" style="display: none;" id='btnsubmit-search'></button>
                                     <div class="search-results"></div>

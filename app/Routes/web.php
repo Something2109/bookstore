@@ -15,6 +15,7 @@
 // ROUTE FRONT-END
 Auth::routes();
 Route::get('/','HomeController@index')->name('homepage');
+Route::get('/home','HomeController@index')->name('homepage');
 
 Route::get('/sach/{id}','HomeController@viewBook')->name('viewBook');
 Route::get('/danh-muc/{id}','HomeController@viewCategory')->name('viewCategory');

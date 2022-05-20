@@ -18,7 +18,7 @@
     <script src="{{ URL::asset('resources/views/lib/angular.min.js') }}"></script>
     <script src="{{ URL::asset('resources/views/lib/app.js') }}"></script>
     <script src="{{ URL::asset('resources/views/lib/tinymce/tinymce.min.js') }}"></script>
-    <link rel="icon" href="https://vcdn.tikicdn.com/assets/media/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{ asset('resources\assets\logo.ico') }}" type="image/x-icon">
   <script>tinymce.init({ selector:'textarea' });</script>
 </head>
 <body >
@@ -27,7 +27,7 @@
      <nav>
     <div class="container">
         <div class="nav-wrapper">
-          <a href="{{ route('homepage') }}" class="brand-logo">Bookbyte</a>
+          <a href="{{ route('homepage') }}" class="brand-logo" style="position:relative">Bookbyte</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
                @if (Auth::guest())
                     <li><a href="{{ route('login') }}">Login</a></li>

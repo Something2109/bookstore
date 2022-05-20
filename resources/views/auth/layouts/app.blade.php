@@ -17,13 +17,13 @@
     <script src="{{ URL::asset('resources/assets/front-end/js/jquery.min.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('resources/assets/front-end/js/materialize.min.js') }}"></script>
     <script src="{{ URL::asset('resources/assets/front-end/js/swiper.jquery.min.js') }}"></script>
-    <script src="{{ URL::asset('resources/lib/jquery.number.min.js') }}"></script>
+    <script src="{{ URL::asset('resources/views/lib/jquery.number.min.js') }}"></script>
     <script src="{{ URL::asset('resources/assets/front-end/js/myscript.js') }}"></script>
 
-    <link rel="stylesheet" href="{{ asset('resources/lib/rateYo/jquery.rateyo.min.css') }}">
-    <script src="{{ asset('resources/lib/rateYo/jquery.rateyo.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('resources/views/lib/rateYo/jquery.rateyo.min.css') }}">
+    <script src="{{ asset('resources/views/lib/rateYo/jquery.rateyo.min.js') }}"></script>
     
-    <link rel="icon" href="https://vcdn.tikicdn.com/assets/media/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{ asset('resources\assets\logo.ico') }}" type="image/x-icon">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -41,35 +41,21 @@
     </script>
 </head>
 <body>
-<header id="header" >
+    <header id="header" >
         <div class="header-form-container navbar-fixed">
             <nav class="nav-extended">
                 <div class="nav-wrapper">
                     <div class="container">
                         <div class="row">
                             <div class="col l2">
-                              <a href="{{ route('homepage') }}" class="brand-logo">Bookbyte</a>
+                              <a href="{{ route('homepage') }}" class="brand-logo" style="position: relative">Bookbyte</a>
                               <!-- <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a> -->
                             </div>
                             <div class="col l1">
                               <a href="" class="show-menu"><i class="material-icons">menu</i></a>
                             </div>
-                            <form class="col l4" action="{{ route('search') }}" method="GET" style="" id='form-submit'>
-                                
-                                <!-- <div class="search-wrapper card">
-                                    <input id="search" name="txtSearch" placeholder="Nhập tên sách, tác giả, cty phát hành" value="{{(isset($txtSearch))?$txtSearch:''}}">
-                                    <i class="material-icons" id='submit-search'>search</i>
-                                    <button type="submit" style="display: none;" id='btnsubmit-search'></button>
-                                    <div class="search-results"></div>
-                                </div>
-                                <script>
-                                    $('#submit-search').click(function(){
-                                        $('#btnsubmit-search').click();
-                                    });
-                                </script> -->
-                            </form>
                             <div class="col l5 offset-l4">
-                                <ul class="hide-on-med-and-down">
+                                <ul class="">
                                     @if (Auth::guest())
                                         <li><a href="{{ route('login') }}">Đăng nhập</a></li>
                                         <li><a href="{{ route('register') }}">Đăng ký</a></li>
@@ -96,9 +82,15 @@
         </div>
     </header><!-- /header -->
 
-
-        @yield('content')
-    </div>
+    <main class="wrap">
+        <div class="container">
+            @yield('content')
+        </div>
+        
+        <div class="center-align">
+            @include('front-end.pagination')
+        </div>
+    </main>
 
     <!-- Scripts -->
     <script src="{{ asset('resources/assets/auth/js/app.js') }}"></script>
