@@ -16,23 +16,13 @@
       <div class="col l4 offset-l2 s12">
         <h5 class="white-text">Liên kết</h5>
         <ul>
-          <li><a class="grey-text text-lighten-3" href="https://github.com/buihai279/bookstore">Project on Github</a></li>
-          <li><a class="grey-text text-lighten-3" href="http://tiki.vn">Tiki.vn</a></li>
           <li><a class="grey-text text-lighten-3" href="{{ route('viewHotBookWeek') }}">Sách bán chạy trong tuần</a></li>
           <li><a class="grey-text text-lighten-3" href="{{ route('viewHotBookMonth') }}">Sách bán chạy trong tháng</a></li>
           <li><a class="grey-text text-lighten-3" href="{{ route('viewBookNewPublish') }}">Sách mới</a></li>
-          <li><div class="g-ytsubscribe" data-channelid="UCfr-whHvVvzNTfKTMueLOig" data-layout="full" data-count="default"></div></li>
-          <script src="https://apis.google.com/js/platform.js"></script>
-
-
         </ul>
       </div>
     </div>
   </div>
   <div class="footer-copyright">
-    <div class="container">
-    © {{date("Y")}} Copyright Text: Bùi Văn Hải (0841060177) - Ngô Phú Minh (0841060138)
-    <a class="grey-text text-lighten-4 right" href="https://www.facebook.com/buihai279">Facebook Me</a>
-    </div>
   </div>
 </footer>

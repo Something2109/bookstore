@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ config('app.locale') }}">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,10 +24,24 @@
     <script src="{{ asset('resources/lib/rateYo/jquery.rateyo.min.js') }}"></script>
     
     <link rel="icon" href="https://vcdn.tikicdn.com/assets/media/favicon.ico" type="image/x-icon">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
+
+    <!-- Styles -->
+    <!-- <link href="{{ asset('resources/assets/auth/css/app.css') }}" rel="stylesheet"> -->
+
+    <!-- Scripts -->
+    <script>
+        window.Laravel = <?php echo json_encode([
+            'csrfToken' => csrf_token(),
+        ]); ?>
+    </script>
 </head>
-<body style="background-color: #fcfcfc">
-    @section('header')
-    <header id="header" >
+<body>
+<header id="header" >
         <div class="header-form-container navbar-fixed">
             <nav class="nav-extended">
                 <div class="nav-wrapper">
@@ -35,14 +49,14 @@
                         <div class="row">
                             <div class="col l2">
                               <a href="{{ route('homepage') }}" class="brand-logo">Bookbyte</a>
-                              <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                              <!-- <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a> -->
                             </div>
                             <div class="col l1">
                               <a href="" class="show-menu"><i class="material-icons">menu</i></a>
                             </div>
                             <form class="col l4" action="{{ route('search') }}" method="GET" style="" id='form-submit'>
                                 
-                                <div class="search-wrapper card">
+                                <!-- <div class="search-wrapper card">
                                     <input id="search" name="txtSearch" placeholder="Nhập tên sách, tác giả, cty phát hành" value="{{(isset($txtSearch))?$txtSearch:''}}">
                                     <i class="material-icons" id='submit-search'>search</i>
                                     <button type="submit" style="display: none;" id='btnsubmit-search'></button>
@@ -52,9 +66,9 @@
                                     $('#submit-search').click(function(){
                                         $('#btnsubmit-search').click();
                                     });
-                                </script>
+                                </script> -->
                             </form>
-                            <div class="col l5">
+                            <div class="col l5 offset-l4">
                                 <ul class="hide-on-med-and-down">
                                     @if (Auth::guest())
                                         <li><a href="{{ route('login') }}">Đăng nhập</a></li>
@@ -68,11 +82,11 @@
                                         </a>
                                     </li>
                                     @endif
-                                    <li id="header-cart " class="col s5">
+                                    <!-- <li id="header-cart " class="col s5">
                                         <a data-reactroot="" rel="nofollow" href="{{ route('cart.index') }}" class="header-cart item">
                                             Giỏ hàng<span class="cart-count">{{Cart::count()}}</span>
                                         </a>
-                                    </li>
+                                    </li> -->
                                 </ul>
                             </div>
                         </div>
@@ -80,49 +94,13 @@
                 </div>
             </nav> <!-- end .nav-extand -->
         </div>
-        <div class="container">
-            <div class="row" style="margin-bottom: 0">
-                <div class=" main-nav-wrap col l3 " id="fixed-menu" style="display: none;position: fixed;z-index: 99999999">
-                    @include('front-end.layouts.menu')
-                </div>
-                </div>
-            </div>
-        </div>
-        <!-- /container -->
     </header><!-- /header -->
-    @show
-    <main class="wrap">
-        <div class="container">
-            @yield('content')
-        </div>
-        
-        <div class="center-align">
-            @include('front-end.pagination')
-        </div>
-    </main>
-    @section('footer')
-        @include('front-end.layouts.footer')
-    @show
-    <div id="overlay-body" style="display: none;"></div>
-    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-        {{ csrf_field() }}
-    </form>
-    <!-- Dropdown Structure -->
-    <ul id="dropdown1" class="dropdown-content">
-        @if (!Auth::guest()&&(Auth::user()->level==1||Auth::user()->level==2))
-            <li><a href="{{ route('dashboard') }}">Vào trang quản trị</a></li>
-        @endif
-        <li><a href="{{ route('flowOrder') }}">Theo dõi đơn hàng</a></li>
-        <li><a href="{{ route('save.index') }}">Sách mua sau</a></li>
-        <li><a href="{{ route('changePassword') }}">Đổi mật khẩu</a></li>
-        <li>
-            <a href="{{ route('logout') }}"
-            onclick="event.preventDefault();
-                     document.getElementById('logout-form').submit();">
-            Đăng xuất
-        </a>
-        </li>
-    </ul>
-<!-- <div class="png-loading"></div> -->
+
+
+        @yield('content')
+    </div>
+
+    <!-- Scripts -->
+    <script src="{{ asset('resources/assets/auth/js/app.js') }}"></script>
 </body>
 </html>

@@ -15,5 +15,5 @@
     {{-- </div> --}}
 @stop
 @section('footer')
-  {{-- <script src="{{ URL::asset('lib/controller/NewsController.js') }}"></script> --}}
+  {{-- <script src="{{ URL::asset('resources/views/lib/controller/NewsController.js') }}"></script> --}}
 @stop

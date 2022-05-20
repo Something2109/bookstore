@@ -1,5 +1,7 @@
-@extends('layouts.app')
-
+@extends('auth.layouts.app')
+@section('title')
+Đăng nhập
+@stop
 @section('content')
 <div class="container">
     <div class="row">

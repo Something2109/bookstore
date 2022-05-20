@@ -90,8 +90,8 @@
         </div>
     </div>
 @endverbatim
-  <script src="{{ URL::asset('lib/dirPagination.js') }}"></script>
-  <script src="{{ URL::asset('lib/controller/SlideController.js') }}"></script>
-<script src="{{ URL::asset('bh279_back-end/js/jquery-ui.min.js') }}"></script>
-  <script src="{{ URL::asset('bh279_back-end/js/sortable-admin.js') }}"></script>
+  <script src="{{ URL::asset('resources/views/lib/dirPagination.js') }}"></script>
+  <script src="{{ URL::asset('resources/views/lib/controller/SlideController.js') }}"></script>
+<script src="{{ URL::asset('resources/views/back-end/stylesheet/js/jquery-ui.min.js') }}"></script>
+  <script src="{{ URL::asset('resources/views/back-end/stylesheet/js/sortable-admin.js') }}"></script>
 @stop
