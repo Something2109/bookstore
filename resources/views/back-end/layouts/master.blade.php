@@ -27,8 +27,9 @@
      <nav>
     <div class="container">
         <div class="nav-wrapper">
-          <a href="{{ route('homepage') }}" class="brand-logo" style="position:relative">Bookbyte</a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <!-- <img src="resources/assets/logo.png" class="responsive-img" style="width: 40px"  alt="logo"> -->
+            <a href="{{ route('homepage') }}" class="brand-logo" style="position:relative">Bookbyte</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
                @if (Auth::guest())
                     <li><a href="{{ route('login') }}">Login</a></li>
                     <li><a href="{{ route('register') }}">Register</a></li>

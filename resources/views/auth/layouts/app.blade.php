@@ -48,8 +48,9 @@
                     <div class="container">
                         <div class="row">
                             <div class="col l2">
-                              <a href="{{ route('homepage') }}" class="brand-logo" style="position: relative">Bookbyte</a>
-                              <!-- <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a> -->
+                                <!-- <img src="resources/assets/logo.png" class="responsive-img" style="width: 40px"  alt="logo"> -->
+                                <a href="{{ route('homepage') }}" class="brand-logo" style="position: relative">Bookbyte</a>
+                                <!-- <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a> -->
                             </div>
                             <div class="col l1">
                               <a href="" class="show-menu"><i class="material-icons">menu</i></a>

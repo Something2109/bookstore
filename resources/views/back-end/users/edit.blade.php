@@ -31,7 +31,7 @@
       <div class="row">
           <div class="input-field col s12">
           @php
-            $arrayName = array('0' => 'Memmber','1' => 'Mod','2' =>  'Admin');
+            $arrayName = array('0' => 'Member','1' => 'Mod','2' =>  'Admin');
           @endphp
             @foreach ($arrayName as $key => $element)
                 <p>
